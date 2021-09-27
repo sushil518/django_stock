@@ -6,19 +6,19 @@ from django.contrib import messages
 def home(request):
     import requests 
     import json
-    # Y3VQ275NOAGTDO50
-    # IEX token : pk_d825d7bf2a2744b0b40d1884e9bfb41d 
+    # API key: Y3VQ275N******
+    # IEX token : pk_d825d7bf2a2744b0b40d188********
     # https://cloud-sse.iexapis.com/stable/stocksUS\?symbols\=spy\&token\=YOUR_TOKEN
-    # use this to search symbol api https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=tcs&apikey=Y3VQ275NOAGTDO50
+    # use this to search symbol api https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=tcs&apikey=Y3VQ275N******
 
-    # comapny overiew api https://www.alphavantage.co/query?function=OVERVIEW&symbol=TCS&apikey=Y3VQ275NOAGTDO50
-    # endpoint api https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=RELIANCE.BSE&apikey=Y3VQ275NOAGTDO50
+    # comapny overiew api https://www.alphavantage.co/query?function=OVERVIEW&symbol=TCS&apikey=Y3VQ275N******
+    # endpoint api https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=RELIANCE.BSE&apikey=Y3VQ275N******
     # https://www.alphavantage.co/query?function=OVERVIEW&symbol=aapl&apikey=Y3VQ275NOAGTDO50
-    # quote endoint: https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=aapl&apikey=Y3VQ275NOAGTDO50
+    # quote endoint: https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=aapl&apikey=Y3VQ275N******
 
     if request.method == 'POST':
         ticker = request.POST['ticker']
-        api_request = requests.get("https://www.alphavantage.co/query?function=OVERVIEW&symbol=" + ticker +"&apikey=Y3VQ275NOAGTDO50")
+        api_request = requests.get("https://www.alphavantage.co/query?function=OVERVIEW&symbol=" + ticker +"&apikey=demo")
         try:
             api = json.loads(api_request.content)
 
