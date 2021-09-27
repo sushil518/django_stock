@@ -13,7 +13,7 @@ def home(request):
 
     # comapny overiew api https://www.alphavantage.co/query?function=OVERVIEW&symbol=TCS&apikey=Y3VQ275N******
     # endpoint api https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=RELIANCE.BSE&apikey=Y3VQ275N******
-    # https://www.alphavantage.co/query?function=OVERVIEW&symbol=aapl&apikey=Y3VQ275NOAGTDO50
+    # https://www.alphavantage.co/query?function=OVERVIEW&symbol=aapl&apikey=Y3VQ275N******
     # quote endoint: https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=aapl&apikey=Y3VQ275N******
 
     if request.method == 'POST':
